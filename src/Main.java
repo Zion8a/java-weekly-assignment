@@ -4,6 +4,7 @@ public class Main {
    public static void main(String[] args) {
 Scanner scan = new Scanner(System.in);
 
+//Uppgift1
         System.out.println("Välj ett alternativ:");
         System.out.println("1: Hej!");
         System.out.println("2: God morgon!");
@@ -26,5 +27,20 @@ switch (choice) {
         System.out.println("Ogiltigt val!");
 
 }
-    }
-}
+//Uppgift2
+
+
+           int min = 1;
+           int max = 100;
+           int range = max - min + 1;
+       //Plus ett eftersom vi vill ha med det första och sista
+           int rand = (int) (Math.random() * range) + min;
+
+
+           System.out.println("Ditt slumpmässiga tal är: " +rand);
+
+               }
+
+           }
+
+
