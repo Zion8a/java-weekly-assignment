@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("=== Java Övningar ===");
 
-        // Kör övningarna i ordning
         exercise1();
         exercise2();
         exercise3();
@@ -15,7 +14,7 @@ public class Main {
     public static void exercise1() {
         Scanner sc = new Scanner(System.in);
 
-        // Visa alternativen
+
         System.out.println("\n=== Övning 1: Switch ===");
         System.out.println("Välj ett alternativ:");
         System.out.println("1. Hej");
@@ -23,10 +22,10 @@ public class Main {
         System.out.println("3. God kväll");
         System.out.print("Ditt val: ");
 
-        // Läs in användarens val
+
         int choice = sc.nextInt();
 
-        // Skriv ut ett meddelande beroende på valet
+
         switch (choice) {
             case 1:
                 System.out.println("Hej!");
@@ -44,7 +43,7 @@ public class Main {
 
     // Övning 2: Slumpa ett heltal mellan 1 och 100
     public static void exercise2() {
-        // Math.random() ger ett tal från 0 upp till, men inte inklusive, 1
+
         int randomNumber = (int) (Math.random() * 100) + 1;
 
         System.out.println("\n=== Övning 2: Slumpmässigt tal ===");
@@ -55,12 +54,12 @@ public class Main {
     public static void exercise3() {
         Scanner sc = new Scanner(System.in);
 
-        // Läs in ett decimaltal
+
         System.out.println("\n=== Övning 3: Math ===");
         System.out.print("Skriv in ett tal: ");
         double number = sc.nextDouble();
 
-        // Gör beräkningarna och skriv ut resultaten
+
         System.out.println("Kvadrat: " + Math.pow(number, 2));
         System.out.println("Kvadratrot: " + Math.sqrt(number));
         System.out.println("Avrundat: " + Math.round(number));
@@ -72,7 +71,7 @@ public class Main {
         boolean running = true;
 
         while (running) {
-            // Visa menyn
+
             System.out.println("\n=== Övning 4: Meny ===");
             System.out.println("Välj ett alternativ:");
             System.out.println("1. Slumpmässigt tal");
@@ -84,7 +83,7 @@ public class Main {
 
             int choice = sc.nextInt();
 
-            // Utför det som användaren valde
+
             switch (choice) {
                 case 1:
                     exercise2();
