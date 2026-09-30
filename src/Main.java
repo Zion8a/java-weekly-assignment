@@ -28,6 +28,18 @@ public class Main {
         int number = (int) (Math.random() * 100) + 1;
         System.out.println("Ditt slumpmässiga tal är: " + number);
 
+        System.out.println("Skriv in ett tal");
+        double inputNumber  = scan.nextDouble();
+
+        double square = Math.pow(inputNumber, 2);
+        System.out.println("Kvadraten är: " + square);
+
+        double squareRoot = Math.sqrt(inputNumber);
+        System.out.println("Kvadratroten är: " + squareRoot);
+
+        System.out.println("Avrundat: " + Math.round(inputNumber));
+
+
     }
 
 }
