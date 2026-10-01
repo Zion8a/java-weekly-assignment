@@ -18,7 +18,7 @@ public class Main {
         System.out.print("Ditt val: ");
 
 
-        int choice = sc.nextInt();
+        int choice = scan.nextInt();
 
 
         switch (choice) {
