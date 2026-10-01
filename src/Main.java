@@ -1,26 +1,36 @@
 import java.util.Scanner;
 
 public class Main {
-    static void main(String[] args) {
+    public static void main(String[] args) {
+        System.out.println("=== Java Övningar ===");
+
+        exercise1();
+        exercise2();
+        exercise3();
+        exercise4();
+    }
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Välj ett alternativ: ");
         System.out.println("1. Hej");
         System.out.println("2. God morgon");
         System.out.println("3. God kväll");
-        int message = scan.nextInt();
+        System.out.print("Ditt val: ");
 
-        switch (message) {
+
+        int choice = sc.nextInt();
+
+
+        switch (choice) {
             case 1:
-                System.out.println("Hej");
+                System.out.println("Hej!");
                 break;
             case 2:
-                System.out.println("God morgon");
+                System.out.println("God morgon!");
                 break;
             case 3:
-                System.out.println("God kväll");
+                System.out.println("God kväll!");
                 break;
-
             default:
                 System.out.println("Ogiltigt val! ");
         }
@@ -80,3 +90,4 @@ public class Main {
                 }
         }
     }
+}
