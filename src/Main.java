@@ -10,13 +10,8 @@ public class Main {
         exercise4();
     }
 
-    // Övning 1: Läs in ett val och använd switch
-    public static void exercise1() {
-        Scanner sc = new Scanner(System.in);
-
-
-        System.out.println("\n=== Övning 1: Switch ===");
-        System.out.println("Välj ett alternativ:");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Välj ett alternativ: ");
         System.out.println("1. Hej");
         System.out.println("2. God morgon");
         System.out.println("3. God kväll");
@@ -37,79 +32,62 @@ public class Main {
                 System.out.println("God kväll!");
                 break;
             default:
-                System.out.println("Ogiltigt val!");
+                System.out.println("Ogiltigt val! ");
         }
-    }
 
-    // Övning 2: Slumpa ett heltal mellan 1 och 100
-    public static void exercise2() {
+        int number = (int) (Math.random() * 100) + 1;
+        System.out.println("Ditt slumpmässiga tal är: " + number);
 
-        int randomNumber = (int) (Math.random() * 100) + 1;
+        System.out.println("Skriv in ett tal");
+        double inputNumber = scan.nextDouble();
 
-        System.out.println("\n=== Övning 2: Slumpmässigt tal ===");
-        System.out.println("Ditt slumpmässiga tal är: " + randomNumber);
-    }
+        double square = Math.pow(inputNumber, 2);
+        System.out.println("Kvadraten är: " + square);
 
-    // Övning 3: Beräkna kvadrat, kvadratrot och avrundning
-    public static void exercise3() {
-        Scanner sc = new Scanner(System.in);
+        double squareRoot = Math.sqrt(inputNumber);
+        System.out.println("Kvadratroten är: " + squareRoot);
 
-
-        System.out.println("\n=== Övning 3: Math ===");
-        System.out.print("Skriv in ett tal: ");
-        double number = sc.nextDouble();
+        System.out.println("Avrundat: " + Math.round(inputNumber));
 
 
-        System.out.println("Kvadrat: " + Math.pow(number, 2));
-        System.out.println("Kvadratrot: " + Math.sqrt(number));
-        System.out.println("Avrundat: " + Math.round(number));
-    }
+        System.out.println("Välj ett alternativ: ");
+        System.out.println("1. Slumpmässigt tal");
+        System.out.println("2. Kvadrat");
+        System.out.println("3. Kvadratrot");
+        System.out.println("4. Avrunda");
+        System.out.println("5. Avsluta");
+        int userChoice = scan.nextInt();
 
-    // Övning 4: Visa en meny tills användaren väljer att avsluta
-    public static void exercise4() {
-        Scanner sc = new Scanner(System.in);
-        boolean running = true;
+                switch (userChoice) {
+                    case 1:
+                        int randomNumber = (int) (Math.random() * 100) + 1;
+                        System.out.println("Slumpmässigt tal: " + randomNumber);
+                        break;
+                    case 2:
+                        System.out.println("Skriv in ett tal");
+                        double squareNumber = scan.nextDouble();
+                        double squareResult = Math.pow(squareNumber, 2);
+                        System.out.println("Kvadraten är: " + squareResult);
+                        break;
+                    case 3:
+                        System.out.println("Skriv in ett tal");
+                        double squareRootNumber = scan.nextDouble();
+                        double squareRootResult = Math.sqrt(squareRootNumber);
+                        System.out.println("Kvadratroten är: " + squareRootResult);
+                        break;
+                    case 4:
+                        System.out.println("Skriv in ett tal");
+                        double roundNumber = scan.nextDouble();
+                        System.out.println("Avrundat: " + Math.round(roundNumber));
+                        break;
+                    case 5:
+                        System.out.println("Programmet avslutas");
+                        break;
 
-        while (running) {
+                    default:
+                        System.out.println("Ogiltigt val! ");
 
-            System.out.println("\n=== Övning 4: Meny ===");
-            System.out.println("Välj ett alternativ:");
-            System.out.println("1. Slumpmässigt tal");
-            System.out.println("2. Kvadrat");
-            System.out.println("3. Kvadratrot");
-            System.out.println("4. Avrunda");
-            System.out.println("5. Avsluta");
-            System.out.print("Ditt val: ");
-
-            int choice = sc.nextInt();
-
-
-            switch (choice) {
-                case 1:
-                    exercise2();
-                    break;
-                case 2:
-                    System.out.print("Skriv in ett tal: ");
-                    double squareNumber = sc.nextDouble();
-                    System.out.println("Kvadrat: " + Math.pow(squareNumber, 2));
-                    break;
-                case 3:
-                    System.out.print("Skriv in ett tal: ");
-                    double rootNumber = sc.nextDouble();
-                    System.out.println("Kvadratrot: " + Math.sqrt(rootNumber));
-                    break;
-                case 4:
-                    System.out.print("Skriv in ett tal: ");
-                    double roundNumber = sc.nextDouble();
-                    System.out.println("Avrundat: " + Math.round(roundNumber));
-                    break;
-                case 5:
-                    running = false;
-                    System.out.println("Programmet avslutat!");
-                    break;
-                default:
-                    System.out.println("Ogiltigt val!");
-            }
+                }
         }
     }
 }
